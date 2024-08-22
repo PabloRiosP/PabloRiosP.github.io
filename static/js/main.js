@@ -1,1 +1,1 @@
-console.log("this script is unused for now.")
+console.log("this script is unused for now.");
