@@ -30,11 +30,6 @@
       </nav>
       <section>
         <h2>Envíame un mensaje</h2>
-        <p class="warning">
-          Aviso: El sitio está en construcción y el formulario aún no está
-          habilitado. Puedes usarlo pero no hará nada y no podré recibir ningún
-          mensaje que se envíe por ahí hasta que habilite dicha funcionalidad.
-        </p>
         <form id="contact-form" method="POST">
           <div>
             <label for="name">Nombre:</label>
@@ -52,7 +47,7 @@
           </div>
 
           <div>
-            <button type="submit">Enviar</button>
+            <button id="submit-button" type="submit">Enviar</button>
           </div>
         </form>
       </section>
@@ -94,5 +89,8 @@
         </ul>
       </div>
     </footer>
+    <!-- Manejo del formulario mediante Javascript con emailjs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript" src="../static/js/contact.js"></script>
   </body>
 </html>
