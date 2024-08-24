@@ -9,3 +9,9 @@ body {
   background-color: #dedeff;
   color: #005000;
 }
+
+.error-msg {
+  font-family: monospace;
+  font-weight: bold;
+  color: #800000;
+}

@@ -1,3 +1,5 @@
+// Para el formulario de contacto.
+// Envía el contenido a un medio especificado en el sericio
 // Inicializando el servicio
 emailjs.init("DUR0SD1U5BvgXKl2n");
 

@@ -29,7 +29,20 @@
         </ul>
       </nav>
       <h2>Formulario: Suma</h2>
-      <form id="sum-form" action="" method="POST"></form>
+      <form id="sum-form" method="POST">
+        <div>
+          <label for="a">A</label>
+          <input id="a" name="a" type="number" required />
+        </div>
+        <div>
+          <label for="b">B</label>
+          <input id="b" name="b" type="number" required />
+        </div>
+        <div>
+          <input id="compute" type="submit" value="Compute" />
+        </div>
+      </form>
+      <div id="result"></div>
     </main>
     <footer>
       <div>
@@ -45,7 +58,6 @@
           </a>
         </p>
       </div>
-
       <div>
         <ul>
           <li><a href="../../index.html">Inicio</a></li>
