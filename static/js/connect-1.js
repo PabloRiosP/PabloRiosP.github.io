@@ -4,7 +4,7 @@ document.getElementById("sum-form").onsubmit = (event) => {
     var a = document.getElementById("a").value;
     var b = document.getElementById("b").value;
 
-    fetch('http://127.0.0.1:5000/sum', {
+    fetch('https://prperez.pythonanywhere.com/sum', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
