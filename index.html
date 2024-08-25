@@ -13,26 +13,50 @@
     />
     <meta name="author" content="Pablo Ríos" />
     <title>Pablo Ríos Pérez - Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="static/css/style.css" />
   </head>
 
   <body>
     <header>
-      <h1>Pablo Ríos Pérez</h1>
-      <p>Analista Programador</p>
+      <div id="navbar-container">
+        <span id="navbar-banner-name">Pablo Ríos Pérez</span>
+        <nav id="navbar">
+          <ul id="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="docs/projects.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="docs/about.html">Acerca de mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="docs/contact.html">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <i id="navbar-mobile-bars" class="fa-solid fa-bars"></i>
+      </div>
+      <div id="header-items" class="header-index">
+        <h1>Pablo Ríos Pérez</h1>
+        <p>Analista Programador</p>
+      </div>
     </header>
-    <main>
-      <nav>
-        <ul>
-          <li><a href="docs/projects.html">Proyectos</a></li>
-          <li><a href="docs/about.html">Acerca de mí</a></li>
-          <li><a href="docs/contact.html">Contacto</a></li>
-        </ul>
-      </nav>
+    <main class="plain">
       <p>
-        Este sitio está en construcción, y estoy centrándome en la estructura y
-        funcionalidad principal antes que en la experiencia de usuario y la
-        estética. Por ahora el sitio será así de feo un tiempo.
+        Estoy trabajando en la apariencia del sitio. Pronto estará completamente
+        disponible.
       </p>
       <p>
         La principal razón para hacer esto con el sitio disponible en línea es
@@ -46,44 +70,42 @@
       </p>
     </main>
     <footer>
-      <div>
-        <p>
+      <div class="footer-main">
+        <div class="footer-nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="docs/projects.html">Proyectos</a></li>
+            <li><a href="docs/about.html">Sobre Mí</a></li>
+            <li><a href="docs/contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        <hr class="footer-vertical-hr" />
+        <div class="footer-contact">
+          <p>Contacto:</p>
+          <ul>
+            <li>
+              <a href="https://linkedin.com/in/pablo-rios-perez-cftsa">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/PabloRiosP"> GitHub </a>
+            </li>
+            <li>
+              <a href="mailto:pablo_rios_p@protonmail.com">
+                pablo_rios_p@protonmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-license">
+        <p class="license">
           &copy; 2024 Pablo Ríos. Todo el contenido de este sitio está bajo la
-          licencia MIT.
+          <a href="docs/legal/LICENSE.html">licencia MIT</a>.
         </p>
-        <p>
-          Licencia MIT:
-          <a href="docs/legal/LICENSE.html">Ver licencia</a>
-        </p>
-        <p>
-          Contacto:
-          <a href="mailto:pablo_rios_p@protonmail.com">
-            pablo_rios_p@protonmail.com
-          </a>
-        </p>
-      </div>
-
-      <div>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="docs/projects.html">Proyectos</a></li>
-          <li><a href="docs/about.html">Sobre Mí</a></li>
-          <li><a href="docs/contact.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <p>Sígueme en:</p>
-        <ul>
-          <li>
-            <a href="https://linkedin.com/in/pablo-rios-perez-cftsa">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/PabloRiosP"> GitHub </a>
-          </li>
-        </ul>
       </div>
     </footer>
+    <script src="static/js/main.js"></script>
   </body>
 </html>
