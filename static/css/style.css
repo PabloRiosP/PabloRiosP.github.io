@@ -4,13 +4,18 @@
 :root {
   /* Paleta de colores */
   /* Modo claro */
-  --light-bg: #FCFAFF;
-  --light-fg: #1E1E23;
-  --light-bd: #9090A0;
-  --light-footer-bg: #1E1E23;
-  --light-footer-fg: #FCFAFF;
+  --light-bg: #fcfaff;
+  --light-fg: #1e1e23;
+  --light-bd: #9090a0;
   /* Modo oscuro */
   /* -- pronto -- */
+
+  /* Paleta a aplicar al CSS */
+  --bg: var(--light-bg); /* Fondo general */
+  --fg: var(--light-fg); /* Letra y SVG */
+  --bd: var(--light-bd); /* Bordes */
+  --footer-bg: var(--light-fg);
+  --footer-fg: var(--light-bg);
 }
 
 * {
@@ -22,8 +27,8 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: var(--light-bg);
-  color: var(--light-fg);
+  background-color: var(--bg);
+  color: var(--fg);
   width: 100%;
   min-height: 100vh;
   font-family: "Red Hat Display", sans-serif;
@@ -39,6 +44,22 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Eliminar punto predefinido de las listas */
+ul {
+  list-style-type: none;
+}
+
+/* Eliminar los botones de los input de tipo number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 /* Elementos globales - fin */
 
@@ -60,6 +81,19 @@ header {
   font-size: 2rem;
   margin: 1.5rem;
 }
+
+/* El estilo de las demás cabeceras */
+.header-docs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  margin: 1.5em;
+}
+
+.header-projects h1 {
+  max-width: 900px;
+}
 /* Componentes generales de cabecera - fin */
 
 /* Barra de navegación - inicio */
@@ -71,8 +105,8 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: var(--light-bg);
-  border-bottom: 1px solid var(--light-bd);
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--bd);
   z-index: 2;
 }
 
@@ -92,7 +126,6 @@ header {
 }
 
 #nav-list {
-  list-style-type: none;
   display: flex;
   flex-direction: row;
 }
@@ -100,16 +133,16 @@ header {
 .nav-item {
   padding: 5px;
   margin: 0 7px;
-  background-color: var(--light-bg);
-  color: var(--light-fg);
+  background-color: var(--bg);
+  color: var(--fg);
   transition: background-color 0.25s, color 0.25s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
 }
 
 .nav-item:hover {
-  background-color: var(--light-fg);
-  color: var(--light-bg);
+  background-color: var(--fg);
+  color: var(--bg);
   transition-delay: 0.1s;
 }
 
@@ -117,31 +150,78 @@ header {
   display: none;
   padding: 3px 5px;
   margin: 4px;
-  border: 1px solid var(--light-bd);
+  border: 1px solid var(--bd);
 }
 /* Barra de navegación - fin */
 /* Componentes de cabecera - fin */
 
 /* Componentes de main - inicio */
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
-}
-
-.plain {
   padding: 1em;
 }
 
 .plain p {
   margin: 0.5em;
 }
+
+/* Sección de proyectos - inicio */
+#projects-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.project-link {
+  display: block;
+  padding: 3px 10px;
+  border: 1px solid var(--bd);
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 0.25s, color 0.25s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.project-link:hover {
+  background-color: var(--fg);
+  color: var(--bg);
+  transition-delay: 0.1s;
+}
+
+.form-field {
+  padding: 0.3em;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.3em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--bd);
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: border-color 0.25s, background-color 0.25s, color 0.25s;
+}
+
+.submit-button:hover {
+  border-color: var(--fg);
+  background-color: var(--fg);
+  color: var(--bg);
+}
+
+/* Sección de proyectos - fin */
 /* Componentes de main - fin */
 
 /* Componentes de footer - inicio */
 footer {
   display: flex;
   flex-direction: column;
-  background-color: var(--light-footer-bg);
-  color: var(--light-footer-fg);
+  background-color: var(--footer-bg);
+  color: var(--footer-fg);
   width: 100%;
 }
 
@@ -157,7 +237,7 @@ footer {
   width: 1px;
   height: 60px;
   border: none;
-  background-color: var(--light-bd);
+  background-color: var(--bd);
 }
 
 .footer-license {
@@ -184,7 +264,7 @@ footer {
     width: 100%;
     z-index: 1;
   }
-  
+
   #navbar-mobile-bars {
     display: block;
   }

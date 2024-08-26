@@ -13,29 +13,55 @@
     />
     <meta name="author" content="Pablo Ríos" />
     <title>Proyectos - Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../static/css/style.css" />
   </head>
 
   <body>
     <header>
-      <h1>Proyectos - Portafolio</h1>
+      <div id="navbar-container">
+        <span id="navbar-banner-name">
+          <a href="../index.html"> Pablo Ríos Pérez </a>
+        </span>
+        <nav id="navbar">
+          <ul id="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Acerca de mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <i id="navbar-mobile-bars" class="fa-solid fa-bars"></i>
+      </div>
+      <div id="header-items" class="header-docs header-projects">
+        <h1>Proyectos</h1>
+      </div>
     </header>
-    <main>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="projects.html">Proyectos</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </nav>
+    <main class="projects">
       <div id="projects-container">
-        <h2>Proyectos</h2>
         <article id="project1" class="project-item">
           <h3 class="project-title">Proyecto de prueba</h3>
           <p class="project-description">
-            Este es un proyecto de prueba para probar la conectividad entre
-            nuestro sitio en GitHub Pages y una API sencilla desarrollada en
-            Python y desplegada en un servidor externo, en este caso
+            Este es un proyecto de prueba para probar la conectividad entre mi
+            sitio en GitHub Pages y una API sencilla desarrollada en Python y
+            desplegada en un servidor externo, en este caso
             <a href="https://www.pythonanywhere.com/">Python Anywhere</a>.
           </p>
           <p class="project-description">
@@ -51,39 +77,44 @@
       </div>
     </main>
     <footer>
-      <div>
-        <p>
+      <div class="footer-main">
+        <div class="footer-nav">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="projects.html">Proyectos</a></li>
+            <li><a href="about.html">Sobre Mí</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        <hr class="footer-vertical-hr" />
+        <div class="footer-contact">
+          <p>Contacto:</p>
+          <ul>
+            <li>
+              <a href="https://linkedin.com/in/pablo-rios-perez-cftsa">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/PabloRiosP">
+                <i class="fa-brands fa-square-github"></i> GitHub
+              </a>
+            </li>
+            <li>
+              <a href="mailto:pablo_rios_p@protonmail.com">
+                pablo_rios_p@protonmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-license">
+        <p class="license">
           &copy; 2024 Pablo Ríos. Todo el contenido de este sitio está bajo la
-          licencia MIT.
+          <a href="legal/LICENSE.html">licencia MIT</a>.
         </p>
-        <p>Licencia MIT: <a href="legal/LICENSE.html">Ver licencia</a></p>
-        <p>
-          Contacto:
-          <a href="mailto:pablo_rios_p@protonmail.com">
-            pablo_rios_p@protonmail.com
-          </a>
-        </p>
-      </div>
-
-      <div>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="projects.html">Proyectos</a></li>
-          <li><a href="about.html">Sobre Mí</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <p>Sígueme en:</p>
-        <ul>
-          <li>
-            <a href="https://linkedin.com/in/pablo-rios-perez-cftsa">
-              LinkedIn
-            </a>
-          </li>
-          <li><a href="https://github.com/PabloRiosP">GitHub</a></li>
-        </ul>
       </div>
     </footer>
+    <script src="../static/js/main.js"></script>
   </body>
 </html>
