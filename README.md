@@ -1,5 +1,7 @@
 # Pablo Rios Perez - Portfolio
 
-This will be my portfolio, uploaded in GitHub Pages. For now I'm doing the main HTML structure without caring about style and functionality. When main structure is finished I will male js functionality to connect this website with real projects. Step by step.
+My web portfolio, uploaded in GitHub Pages.
 
-Anyway, feedback is welcome.
+Right now I'm fixing the HTML structure to fit in my CSS style, and taking my time to make new styles in that CSS file.
+
+Feedback is always welcome. Take care.
