@@ -19,3 +19,11 @@ window.addEventListener("resize", () => {
         element.style.display = "none";
     }
 });
+
+// Manejo del tema claro y oscuro
+document.getElementById("theme-btn").onclick = () => {
+  const currentTheme = document.body.classList.toggle('dark-theme') ? 'dark' : 'light';
+  document.getElementById("theme-icon").classList.toggle('fa-sun', currentTheme === 'dark');
+  document.getElementById("theme-icon").classList.toggle('fa-moon', currentTheme === 'light');
+  localStorage.setItem('theme', currentTheme);
+}

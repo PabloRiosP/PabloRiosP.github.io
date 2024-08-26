@@ -1,8 +1,8 @@
 document.getElementById("sum-form").onsubmit = (event) => {
     event.preventDefault();
 
-    var a = document.getElementById("a").value;
-    var b = document.getElementById("b").value;
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
 
     fetch('https://prperez.pythonanywhere.com/sum', {
         method: 'POST',
