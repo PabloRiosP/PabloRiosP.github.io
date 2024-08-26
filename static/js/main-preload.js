@@ -3,12 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const userPreference = localStorage.getItem("theme");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-  // Si hay una preferencia guardada, usarla.
+  const themeIcon = document.getElementById("theme-icon");
+
+  function toggleTheme(isDark) {
+    document.body.classList.toggle("dark-theme", isDark);
+    themeIcon.classList.toggle("fa-sun", isDark);
+    themeIcon.classList.toggle("fa-moon", !isDark);
+  }
+
   if (userPreference) {
-    document.body.classList.toggle("dark-theme", userPreference === "dark");
+    toggleTheme(userPreference === "dark");
   } else {
-    // Si no hay preferencia guardada, aplicar el tema según la preferencia del sistema.
-    document.body.classList.toggle("dark-theme", prefersDark);
+    toggleTheme(prefersDark);
   }
 
   // Monitorizar cambios en la preferencia del sistema y actualizar en tiempo real.
