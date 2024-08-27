@@ -33,24 +33,28 @@
   <body class="">
     <header>
       <div id="navbar-container">
-        <span id="navbar-banner-name"> Pablo Ríos Pérez </span>
-        <nav id="navbar">
-          <ul id="nav-list">
-            <li id="theme-btn" class="nav-item">
-              <i id="theme-icon" class="fa-solid fa-moon"></i>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="docs/projects.html">Proyectos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="docs/about.html">Acerca de mí</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="docs/contact.html">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-        <i id="navbar-mobile-bars" class="fa-solid fa-bars"></i>
+        <div class="navbar-start">
+          <span id="navbar-banner-name"> Pablo Ríos Pérez </span>
+        </div>
+        <div class="navbar-end">
+          <div id="theme-btn" class="nav-item">
+            <i id="theme-icon" class="fa-solid fa-moon"></i>
+          </div>
+          <nav id="navbar">
+            <ul id="nav-list">
+              <li class="nav-item">
+                <a class="nav-link" href="docs/projects.html">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="docs/about.html">Acerca de mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="docs/contact.html">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+          <i id="navbar-mobile-bars" class="fa-solid fa-bars"></i>
+        </div>
       </div>
       <div id="header-items" class="header-index">
         <h1>Pablo Ríos Pérez</h1>
@@ -83,25 +87,30 @@
     <footer>
       <div class="footer-main">
         <div class="footer-nav">
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="docs/projects.html">Proyectos</a></li>
-            <li><a href="docs/about.html">Sobre Mí</a></li>
-            <li><a href="docs/contact.html">Contacto</a></li>
-          </ul>
+          <div class="footer-col">
+            <a class="footer-item" href="index.html">Inicio</a>
+            <a class="footer-item" href="docs/projects.html">Proyectos</a>
+          </div>
+          <div class="footer-col">
+            <a class="footer-item" href="docs/about.html">Sobre Mí</a>
+            <a class="footer-item" href="docs/contact.html">Contacto</a>
+          </div>
         </div>
         <hr class="footer-vertical-hr" />
         <div class="footer-contact">
           <p>Contacto:</p>
           <div class="footer-sites">
-            <a href="https://linkedin.com/in/pablo-rios-perez-cftsa">
+            <a
+              class="footer-item"
+              href="https://linkedin.com/in/pablo-rios-perez-cftsa"
+            >
               <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
-            <a href="https://github.com/PabloRiosP">
+            <a class="footer-item" href="https://github.com/PabloRiosP">
               <i class="fa-brands fa-square-github"></i> GitHub
             </a>
           </div>
-          <div class="footer-email">
+          <div class="footer-email footer-item">
             <a href="mailto:pablo_rios_p@protonmail.com">
               pablo_rios_p@protonmail.com
             </a>
@@ -109,9 +118,9 @@
         </div>
       </div>
       <div class="footer-license">
-        <p class="license">
+        <p class="license footer-item">
           &copy; 2024 Pablo Ríos. Todo el contenido de este sitio está bajo la
-          <a href="docs/legal/LICENSE.html">licencia MIT</a>.
+          <a class="italic" href="docs/legal/LICENSE.html">licencia MIT</a>.
         </p>
       </div>
     </footer>

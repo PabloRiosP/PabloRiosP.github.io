@@ -33,6 +33,9 @@
   --dark-footer-bg: #2b284e;
   --dark-warn: #e22828;
 
+  /* Otros parámetros */
+  --inner-width: 800px;
+
   /* Paleta a aplicar al CSS */
   --bg: var(--light-bg); /* Fondo general */
   --fg: var(--light-fg); /* Letra y SVG */
@@ -56,7 +59,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 body {
@@ -70,10 +73,15 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  z-index: 0;
 }
 /* Configuración general - fin */
 /* Parámetros generales - fin */
+
+/* Clases de uso general - inicio */
+.italic {
+  font-style: italic;
+}
+/* Clases de uso general - fin */
 
 /* Elementos globales - inicio */
 /* Eliminar elementos predefinidos de los vínculos */
@@ -133,7 +141,7 @@ header {
 }
 
 .header-projects h1 {
-  max-width: 900px;
+  max-width: var(--inner-width);
 }
 /* Componentes generales de cabecera - fin */
 
@@ -149,6 +157,11 @@ header {
   background-color: var(--bg);
   border-bottom: 1px solid var(--bd);
   z-index: 2;
+}
+
+.navbar-end {
+  display: flex;
+  flex-direction: row;
 }
 
 #navbar {
@@ -220,7 +233,7 @@ main p a:hover {
 
 .plain-container {
   width: 100%;
-  max-width: 800px;
+  max-width: var(--inner-width);
 }
 
 .plain p {
@@ -235,7 +248,7 @@ main p a:hover {
 
 #projects-container {
   width: 100%;
-  max-width: 900px;
+  max-width: var(--inner-width);
 }
 
 .project-description {
@@ -287,22 +300,50 @@ main p a:hover {
 footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: var(--footer-bg);
   color: var(--footer-fg);
   width: 100%;
 }
 
+footer a {
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.25s;
+  transition-timing-function: ease-in;
+}
+
+footer a:hover {
+  text-decoration-color: var(--footer-fg);
+}
+
 .footer-main {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: var(--inner-width);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  width: 16em;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-item {
+  margin: 0.5em;
 }
 
 .footer-vertical-hr {
   width: 1px;
-  height: 60px;
+  height: 3em;
   border: none;
   background-color: var(--bd);
 }
@@ -343,6 +384,7 @@ footer {
     display: none;
     position: fixed;
     top: 37px;
+    left: 0;
     width: 100%;
     z-index: 1;
   }
