@@ -25,11 +25,13 @@
   --light-bg: #fcfaff;
   --light-fg: #1e1e23;
   --light-bd: #9090a0;
+  --light-warn: #800000;
   /* Modo oscuro */
   --dark-bg: #1e1e23;
   --dark-fg: #fcfaff;
-  --dark-bd: #9090a0;
-  --dark-footer-bg: #2a2292;
+  --dark-bd: #52525c;
+  --dark-footer-bg: #2b284e;
+  --dark-warn: #e22828;
 
   /* Paleta a aplicar al CSS */
   --bg: var(--light-bg); /* Fondo general */
@@ -37,6 +39,7 @@
   --bd: var(--light-bd); /* Bordes */
   --footer-bg: var(--light-fg);
   --footer-fg: var(--light-bg);
+  --warning: var(--light-warn);
 }
 
 /* Estilos para el tema oscuro */
@@ -46,6 +49,7 @@
   --bd: var(--dark-bd);
   --footer-bg: var(--dark-footer-bg);
   --footer-fg: var(--dark-fg);
+  --warning: var(--dark-warn);
 }
 
 /* Configuración general - inicio */
@@ -109,21 +113,21 @@ header {
   width: 100%;
 }
 
-/* El estilo de la cabecera principal */
-.header-index {
+#header-items {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;  
+}
+
+/* El estilo de la cabecera principal */
+.header-index {
   font-size: 2rem;
   margin: 1.5rem;
 }
 
 /* El estilo de las demás cabeceras */
 .header-docs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.5em;
   margin: 1.5em;
 }
@@ -196,7 +200,7 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
   padding: 1em;
@@ -214,8 +218,14 @@ main p a:hover {
   text-decoration-color: var(--fg);
 }
 
+.plain-container {
+  width: 100%;
+  max-width: 800px;
+}
+
 .plain p {
   margin: 0.5em;
+  text-justify: inter-word;
 }
 
 /* Sección de proyectos - inicio */
@@ -297,6 +307,20 @@ footer {
   background-color: var(--bd);
 }
 
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-sites {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-sites a:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
 .footer-license {
   padding: 3px;
   text-align: center;
@@ -307,7 +331,7 @@ footer {
 .error-msg {
   font-family: monospace;
   font-weight: bold;
-  color: #800000;
+  color: var(--warning);
 }
 /* Estilos especiales - fin*/
 
