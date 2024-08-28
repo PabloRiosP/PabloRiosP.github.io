@@ -13,59 +13,156 @@
     />
     <meta name="author" content="Pablo Ríos" />
     <title>Acerca de mí - Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../static/css/style.css" />
+    <script src="../static/js/main-preload.js"></script>
   </head>
 
-  <body>
+  <body class="">
     <header>
-      <h1>Acerca de mí - Portafolio</h1>
+      <div id="navbar-container">
+        <div class="navbar-start">
+          <span id="navbar-banner-name"> Pablo Ríos Pérez </span>
+        </div>
+        <div class="navbar-end">
+          <div id="theme-btn" class="nav-item">
+            <i id="theme-icon" class="fa-solid fa-moon"></i>
+          </div>
+          <nav id="navbar">
+            <ul id="nav-list">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projects.html">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+          <i id="navbar-mobile-bars" class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div id="header-items" class="header-docs header-projects">
+        <h1>Acerca de mí</h1>
+      </div>
     </header>
-    <main>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="projects.html">Proyectos</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <p>About</p>
+    <main class="plain">
+      <div id="plain-container">
+        <p>
+          Soy un desarrollador de software con una sólida base en una variedad
+          de lenguajes de programación, incluyendo Python, Java, C#, JavaScript
+          y PHP. A lo largo de mi carrera, he adquirido experiencia
+          significativa en diferentes áreas del desarrollo y la gestión de
+          sistemas informáticos.
+        </p>
+        
+        <p>
+          Mi formación técnica incluye un enfoque en Python, donde tengo
+          experiencia intermedia en bibliotecas como Pandas, OpenPyxl, XlWings,
+          Numpy y win32com, lo que me permite manejar y analizar datos de manera
+          efectiva. En Java, he trabajado con JFrame y Android, desarrollando
+          aplicaciones tanto de escritorio como móviles. Mi conocimiento en
+          JavaScript se ha aplicado en el desarrollo de aplicaciones web
+          utilizando A-Frame, JQuery y Three.js.
+        </p>
+
+        <p>
+          Además de mis habilidades en estos lenguajes, tengo conocimientos
+          intermedios en Bash, C#, PHP, SQL, HTML y CSS, lo que me proporciona
+          una perspectiva integral en el desarrollo de software. También poseo
+          conocimientos básicos en COBOL, Informix 4GL, Ruby, Perl, LaTeX, C y
+          C++, ampliando mi capacidad para adaptarme a diversas tecnologías.
+        </p>
+
+        <p>
+          Mi experiencia laboral abarca roles en distintos ámbitos. En mi
+          posición más reciente como Encargado de Informática en Cooperativa
+          Luzagro, he manejado la resolución de problemas informáticos, la
+          identificación y corrección de errores en bases de datos IBM Informix,
+          y el desarrollo de herramientas en Python y C# para automatizar
+          procesos y mejorar la eficiencia. Destaco logros como la
+          automatización de informes mensuales y la implementación de servidores
+          que optimizaron la infraestructura de TI.
+        </p>
+
+        <p>
+          En mi etapa de práctica profesional con la Fundación Altué, participé
+          en el desarrollo de una plataforma web para promover el turismo
+          ecológico, trabajando en PHP, MySQL, y contribuyendo al diseño de
+          modelos 3D con A-Frame y estilos frontend con Bootstrap 5.
+        </p>
+
+        <p>
+          Actualmente, estoy buscando especializarme en ciencia de datos, área
+          que considero crucial para abordar mis intereses en visión artificial
+          y procesamiento de datos. Mi objetivo es utilizar mis habilidades
+          actuales para crear proyectos innovadores y adquirir conocimientos más
+          profundos en áreas que me apasionan.
+        </p>
+
+        <p>
+          Soy una persona orientada a objetivos, resolutiva y con una gran
+          disposición para aprender. Mi experiencia en distintas tecnologías y
+          mi capacidad para adaptarme a nuevos desafíos me permiten enfrentar
+          proyectos diversos y contribuir significativamente a los equipos en
+          los que participo.
+        </p>
+      </div>
     </main>
     <footer>
-      <div>
-        <p>
-          &copy; 2024 Pablo Ríos. Todo el contenido de este sitio está bajo la
-          licencia MIT.
-        </p>
-        <p>Licencia MIT: <a href="legal/LICENSE.html">Ver licencia</a></p>
-        <p>
-          Contacto:
-          <a href="mailto:pablo_rios_p@protonmail.com">
-            pablo_rios_p@protonmail.com
-          </a>
-        </p>
-      </div>
-
-      <div>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="projects.html">Proyectos</a></li>
-          <li><a href="about.html">Sobre Mí</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <p>Sígueme en:</p>
-        <ul>
-          <li>
-            <a href="https://linkedin.com/in/pablo-rios-perez-cftsa">
-              LinkedIn
+      <div class="footer-main">
+        <div class="footer-nav">
+          <div class="footer-col">
+            <a class="footer-item" href="../index.html">Inicio</a>
+            <a class="footer-item" href="projects.html">Proyectos</a>
+          </div>
+          <div class="footer-col">
+            <a class="footer-item" href="about.html">Sobre Mí</a>
+            <a class="footer-item" href="contact.html">Contacto</a>
+          </div>
+        </div>
+        <hr class="footer-vertical-hr" />
+        <div class="footer-contact">
+          <p>Contacto:</p>
+          <div class="footer-sites">
+            <a
+              class="footer-item"
+              href="https://linkedin.com/in/pablo-rios-perez-cftsa"
+            >
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
-          </li>
-          <li>
-            <a href="https://github.com/PabloRiosP"> GitHub </a>
-          </li>
-        </ul>
+            <a class="footer-item" href="https://github.com/PabloRiosP">
+              <i class="fa-brands fa-square-github"></i> GitHub
+            </a>
+          </div>
+          <div class="footer-email footer-item">
+            <a href="mailto:pablo_rios_p@protonmail.com">
+              pablo_rios_p@protonmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-license">
+        <p class="license footer-item">
+          &copy; 2024 Pablo Ríos. Todo el contenido de este sitio está bajo la
+          <a class="italic" href="legal/LICENSE.html">licencia MIT</a>.
+        </p>
       </div>
     </footer>
+    <script src="../static/js/main.js"></script>
   </body>
 </html>

@@ -13,21 +13,54 @@
     />
     <meta name="author" content="Pablo Ríos" />
     <title>Formulario de contacto - Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../static/css/style.css" />
+    <script src="../static/js/main-preload.js"></script>
   </head>
 
-  <body>
+  <body class="">
     <header>
-      <h1>Formulario de contacto - Portafolio</h1>
+      <div id="navbar-container">
+        <div class="navbar-start">
+          <span id="navbar-banner-name"> Pablo Ríos Pérez </span>
+        </div>
+        <div class="navbar-end">
+          <div id="theme-btn" class="nav-item">
+            <i id="theme-icon" class="fa-solid fa-moon"></i>
+          </div>
+          <nav id="navbar">
+            <ul id="nav-list">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Acerca de mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+          <i id="navbar-mobile-bars" class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div id="header-items" class="header-docs">
+        <h1>Formulario</h1>
+      </div>
     </header>
-    <main>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="projects.html">Proyectos</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </nav>
+    <main class="projects">
       <section>
         <h2>Envíame un mensaje</h2>
         <form id="contact-form" method="POST">
@@ -53,44 +86,45 @@
       </section>
     </main>
     <footer>
-      <div>
-        <p>
-          &copy; 2024 Pablo Ríos. Todo el contenido de este sitio está bajo la
-          licencia MIT.
-        </p>
-        <p>Licencia MIT: <a href="legal/LICENSE.html">Ver licencia</a></p>
-        <p>
-          Contacto:
-          <a href="mailto:pablo_rios_p@protonmail.com">
-            pablo_rios_p@protonmail.com
-          </a>
-        </p>
-      </div>
-
-      <div>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="projects.html">Proyectos</a></li>
-          <li><a href="about.html">Sobre Mí</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <p>Sígueme en:</p>
-        <ul>
-          <li>
-            <a href="https://linkedin.com/in/pablo-rios-perez-cftsa">
-              LinkedIn
+      <div class="footer-main">
+        <div class="footer-nav">
+          <div class="footer-col">
+            <a class="footer-item" href="../index.html">Inicio</a>
+            <a class="footer-item" href="projects.html">Proyectos</a>
+          </div>
+          <div class="footer-col">
+            <a class="footer-item" href="about.html">Sobre Mí</a>
+            <a class="footer-item" href="contact.html">Contacto</a>
+          </div>
+        </div>
+        <hr class="footer-vertical-hr" />
+        <div class="footer-contact">
+          <p>Contacto:</p>
+          <div class="footer-sites">
+            <a
+              class="footer-item"
+              href="https://linkedin.com/in/pablo-rios-perez-cftsa"
+            >
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
-          </li>
-          <li>
-            <a href="https://github.com/PabloRiosP"> GitHub </a>
-          </li>
-        </ul>
+            <a class="footer-item" href="https://github.com/PabloRiosP">
+              <i class="fa-brands fa-square-github"></i> GitHub
+            </a>
+          </div>
+          <div class="footer-email footer-item">
+            <a href="mailto:pablo_rios_p@protonmail.com">
+              pablo_rios_p@protonmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-license">
+        <p class="license footer-item">
+          &copy; 2024 Pablo Ríos. Todo el contenido de este sitio está bajo la
+          <a class="italic" href="legal/LICENSE.html">licencia MIT</a>.
+        </p>
       </div>
     </footer>
-    <!-- Manejo del formulario mediante Javascript con emailjs -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript" src="../static/js/contact.js"></script>
+    <script src="../static/js/main.js"></script>
   </body>
 </html>
