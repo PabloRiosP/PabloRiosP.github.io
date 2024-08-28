@@ -35,6 +35,7 @@
 
   /* Otros parámetros */
   --inner-width: 800px;
+  --form-width: 800px;
 
   /* Paleta a aplicar al CSS */
   --bg: var(--light-bg); /* Fondo general */
@@ -80,6 +81,10 @@ body {
 /* Clases de uso general - inicio */
 .italic {
   font-style: italic;
+}
+
+.center {
+  text-align: center;
 }
 /* Clases de uso general - fin */
 
@@ -229,6 +234,29 @@ main p a {
 
 main p a:hover {
   text-decoration-color: var(--fg);
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  width: var(--form-width);
+}
+
+.form-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-item label {
+  display: inline-block;
+  width: 12rem;
+  padding: 0 0.5rem;
+}
+
+.form-input {
+  flex-grow: 1;
 }
 
 .plain-container {

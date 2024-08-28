@@ -62,25 +62,25 @@
     </header>
     <main class="projects">
       <section>
-        <h2>Envíame un mensaje</h2>
+        <h2 class="center">Envíame un mensaje</h2>
         <form id="contact-form" method="POST">
-          <div>
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required />
+          <div class="form-item">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" class="form-input" name="name" required />
           </div>
 
-          <div>
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required />
+          <div class="form-item">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" class="form-input" name="email" required />
           </div>
 
-          <div>
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+          <div class="form-item">
+            <label for="message">Mensaje</label>
+            <textarea id="message" class="form-input" name="message" rows="4" required></textarea>
           </div>
 
-          <div>
-            <button id="submit-button" type="submit">Enviar</button>
+          <div class="form-item">
+            <button id="submit-button" class="submit-button" type="submit">Enviar</button>
           </div>
         </form>
       </section>
