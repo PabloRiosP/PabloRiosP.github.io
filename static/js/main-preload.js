@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("change", (e) => {
       if (!localStorage.getItem("theme")) {
         // Solo si no hay preferencia guardada
-        document.body.classList.toggle("dark-theme", e.matches);
+        toggleTheme(e.matches);
       }
     });
 });

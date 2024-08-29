@@ -242,23 +242,6 @@ main form {
   width: var(--form-width);
 }
 
-.form-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.form-item label {
-  display: inline-block;
-  width: 12rem;
-  padding: 0 0.5rem;
-}
-
-.form-input {
-  flex-grow: 1;
-}
-
 .plain-container {
   width: 100%;
   max-width: var(--inner-width);
@@ -269,7 +252,6 @@ main form {
   text-justify: inter-word;
 }
 
-/* Sección de proyectos - inicio */
 .projects {
   justify-content: flex-start;
 }
@@ -300,12 +282,26 @@ main form {
   transition-delay: 0.1s;
 }
 
-.form-field {
-  padding: 0.3em;
+.form-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0.3rem;
+}
+
+.form-item label {
+  display: inline-block;
+  width: 12rem;
+  padding: 0 0.5rem;
+}
+
+.form-input {
+  flex-grow: 1;
 }
 
 .submit-button {
-  width: 100%;
+  width: 30%;
   padding: 0.3em;
   border-width: 1px;
   border-style: solid;

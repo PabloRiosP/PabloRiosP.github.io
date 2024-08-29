@@ -22,8 +22,9 @@ window.addEventListener("resize", () => {
 
 // Manejo del tema claro y oscuro
 document.getElementById("theme-btn").onclick = () => {
-  const currentTheme = document.body.classList.toggle('dark-theme') ? 'dark' : 'light';
-  document.getElementById("theme-icon").classList.toggle('fa-sun', currentTheme === 'dark');
-  document.getElementById("theme-icon").classList.toggle('fa-moon', currentTheme === 'light');
-  localStorage.setItem('theme', currentTheme);
+  const isDark = document.body.classList.toggle('dark-theme');
+  const newTheme = isDark ? 'dark' : 'light';
+  localStorage.setItem('theme', newTheme);
+  document.getElementById("theme-icon").classList.toggle('fa-sun', isDark);
+  document.getElementById("theme-icon").classList.toggle('fa-moon', !isDark);
 }
