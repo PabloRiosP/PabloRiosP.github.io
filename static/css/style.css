@@ -17,7 +17,6 @@
  * Media Queries
  * Estilos temporales BORRAR */
 
-
 /* Parámetros generales - inicio */
 :root {
   /* Paleta de colores */
@@ -32,6 +31,9 @@
   --dark-bd: #52525c;
   --dark-footer-bg: #2b284e;
   --dark-warn: #e22828;
+  --dark-form-bg: #1e1e23;
+  --dark-form-fg: #fcfaff;
+  --dark-form-bd: #52525c;
 
   /* Otros parámetros */
   --inner-width: 800px;
@@ -41,6 +43,9 @@
   --bg: var(--light-bg); /* Fondo general */
   --fg: var(--light-fg); /* Letra y SVG */
   --bd: var(--light-bd); /* Bordes */
+  --form-bg: var(--light-bg);
+  --form-fg: var(--light-fg);
+  --form-bd: var(--light-bd);
   --footer-bg: var(--light-fg);
   --footer-fg: var(--light-bg);
   --warning: var(--light-warn);
@@ -51,6 +56,9 @@
   --bg: var(--dark-bg);
   --fg: var(--dark-fg);
   --bd: var(--dark-bd);
+  --form-bg: var(--dark-form-bg);
+  --form-fg: var(--dark-form-fg);
+  --form-bd: var(--dark-form-bd);
   --footer-bg: var(--dark-footer-bg);
   --footer-fg: var(--dark-fg);
   --warning: var(--dark-warn);
@@ -86,6 +94,20 @@ body {
 .center {
   text-align: center;
 }
+
+.no-transition * {
+  transition: none !important;
+}
+
+.theme-toggle-transition,
+.theme-toggle-transition * {
+  transition: border-color 0.25s ease-out, color 0.25s ease-out, background-color 0.25s ease-out !important;
+}
+
+.theme-toggle-transition .form-input,
+.theme-toggle-transition .button {
+  transition: border-color 0.25s ease-out, color 0.25s ease-out, background-color 0.25s ease-out !important;
+}
 /* Clases de uso general - fin */
 
 /* Elementos globales - inicio */
@@ -115,6 +137,11 @@ input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
+.button {
+  background-color: var(--bg);
+  color: var(--fg);
+}
 /* Elementos globales - fin */
 
 /* Componentes de cabecera - inicio */
@@ -130,7 +157,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 
 /* El estilo de la cabecera principal */
@@ -192,8 +219,6 @@ header {
 .nav-item {
   padding: 5px;
   margin: 0 7px;
-  background-color: var(--bg);
-  color: var(--fg);
   transition: background-color 0.25s, color 0.25s;
   transition-timing-function: ease-out;
   transition-delay: 0s;
@@ -297,7 +322,19 @@ main form {
 }
 
 .form-input {
+  font-family: inherit;
   flex-grow: 1;
+  background-color: var(--form-bg);
+  color: var(--form-fg);
+  border: 1px solid var(--form-bd);
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: transparent;
+  transition: outline-color 0.25s;
+}
+
+.form-input:focus {
+  outline-color: var(--form-bd);
 }
 
 .submit-button {
@@ -306,8 +343,6 @@ main form {
   border-width: 1px;
   border-style: solid;
   border-color: var(--bd);
-  background-color: var(--bg);
-  color: var(--fg);
   transition: border-color 0.25s, background-color 0.25s, color 0.25s;
 }
 
