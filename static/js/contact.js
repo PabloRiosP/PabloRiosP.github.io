@@ -1,28 +1,28 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById("contactForm").onsubmit = (event) => {
   event.preventDefault();
-  
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  var message = document.getElementById('message').value;
-  
-  var url = 'pabloriosform.infinitefreeapp.com';
-  
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  let url = "pabloriosform.infinitefreeapp.com";
+
   fetch(url, {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-          name: name,
-          email: email,
-          message: message
-      })
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      message: message,
+    }),
   })
-  .then(response => response.text())
-  .then(result => {
+    .then((response) => response.text())
+    .then((result) => {
       alert(result);
-  })
-  .catch(error => {
-      alert('Hubo un problema al enviar el mensaje: ' + error.message);
-  });
-});
+    })
+    .catch((error) => {
+      alert("Hubo un problema al enviar el mensaje: " + error.message);
+    });
+};
