@@ -1,4 +1,4 @@
-document.getElementById("contactForm").onsubmit = (event) => {
+document.getElementById("contact-form").onsubmit = (event) => {
   event.preventDefault();
 
   let name = document.getElementById("name").value;
