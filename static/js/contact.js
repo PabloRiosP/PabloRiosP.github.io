@@ -5,9 +5,7 @@ document.getElementById("contact-form").onsubmit = (event) => {
   let email = document.getElementById("email").value;
   let message = document.getElementById("message").value;
 
-  let url = "pabloriosform.infinitefreeapp.com";
-
-  fetch(url, {
+  fetch("https://clean-organic-tiglon.glitch.me", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
