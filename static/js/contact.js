@@ -1,9 +1,13 @@
 document.getElementById("contact-form").onsubmit = (event) => {
   event.preventDefault();
 
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
+  let nameField = document.getElementById("name");
+  let emailField = document.getElementById("email");
+  let messageField = document.getElementById("message");
+
+  let name = nameField.value;
+  let email = emailField.value;
+  let message = messageField.value;
 
   fetch("https://clean-organic-tiglon.glitch.me", {
     method: "POST",
@@ -19,6 +23,9 @@ document.getElementById("contact-form").onsubmit = (event) => {
     .then((response) => response.text())
     .then((result) => {
       alert(result);
+      nameField.value = "";
+      emailField.value = "";
+      messageField.value = "";
     })
     .catch((error) => {
       alert("Hubo un problema al enviar el mensaje: " + error.message);
