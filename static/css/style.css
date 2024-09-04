@@ -68,7 +68,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 body {
@@ -218,7 +218,9 @@ header {
 
 .nav-item {
   padding: 5px;
-  margin: 0 7px;
+  margin: 0 3px;
+  width: 6rem;
+  text-align: center;
   transition: background-color 0.25s, color 0.25s;
   transition-timing-function: ease-out;
   transition-delay: 0s;
@@ -235,6 +237,10 @@ header {
   padding: 3px 5px;
   margin: 4px;
   border: 1px solid var(--bd);
+}
+
+#theme-btn {
+    width: 1rem;
 }
 /* Barra de navegación - fin */
 /* Componentes de cabecera - fin */
@@ -455,7 +461,42 @@ footer a:hover {
   #nav-list {
     flex-direction: column;
   }
-  /* MQ Navbar - Fin */
+
+  .nav-item {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer-main {
+    flex-direction: column-reverse;
+    max-width: 300px; 
+  }
+
+  .footer-nav, .footer-contact {
+    width: 100%;
+  }
+
+  .footer-col {
+    width: 50%;
+  }
+
+  .footer-sites {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .footer-contact-link {
+    width: 40%;
+  }
+
+  .footer-item {
+    text-align: center;
+  }
+
+  .footer-vertical-hr {
+    display: none;
+  }
 }
 /* Media queries - Fin */
 
@@ -464,3 +505,6 @@ footer a:hover {
 .hide {
   display: none;
 }
+  /* MQ Navbar - Fin */
+
+
