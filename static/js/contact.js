@@ -60,7 +60,7 @@ document.getElementById("contact-form").onsubmit = (event) => {
   let email = emailField.value;
   let message = messageField.value;
 
-  fetch("https://clean-organic-tiglon.glitch.me/ping", {
+  fetch("https://clean-organic-tiglon.glitch.me", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
