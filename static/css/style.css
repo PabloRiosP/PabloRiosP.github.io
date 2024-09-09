@@ -295,8 +295,15 @@ main form {
   margin: 0.5em 0;
 }
 
+.project-link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .project-link {
   display: block;
+  width: calc(50% - 2em);
   padding: 3px 10px;
   border: 1px solid var(--bd);
   background-color: var(--bg);
