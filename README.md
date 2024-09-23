@@ -2,6 +2,6 @@
 
 My web portfolio, uploaded in GitHub Pages.
 
-Right now I'm fixing the HTML structure to fit in my CSS style, and taking my time to make new styles in that CSS file.
+I'm already in a job so I have no much time to improve my portfolio. Anyway I'll put some projects on it soon.
 
 Feedback is always welcome. Take care.
